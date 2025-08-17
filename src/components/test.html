@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Noise Animation</title>
+<style>
+  body {
+    margin: 0;
+    background: black;
+    color: lime;
+    font-family: monospace;
+    white-space: pre;
+    line-height: 0.8em;
+  }
+  pre {
+    font-size: 10px;
+  }
+</style>
+</head>
+<body>
+<pre id="screen"></pre>
+<script>
+let noise3D = () => 0;
+
+// Load SimplexNoise
+fetch("https://raw.githubusercontent.com/blindman67/SimplexNoiseJS/master/simplexNoise.js")
+  .then(res => res.text())
+  .then(code => {
+    const openSimplexNoise = new Function("return " + code)();
+    noise3D = openSimplexNoise(Date.now()).noise3D;
+  });
+
+const density = 'Ñ@#W$9876543210?!abcxyz;:+=-,._ ';
+const screen = document.getElementById("screen");
+
+function main(coord, context) {
+  const t = context.time * 0.0007;
+  const s = 0.1;
+  const x = coord.x * s;
+  const y = coord.y * s / context.aspect + t;
+  const i = Math.floor((noise3D(x, y, t) * 0.5 + 0.5) * density.length);
+  return density[i % density.length];
+}
+
+function render() {
+  const cols = Math.floor(window.innerWidth / 10);
+  const rows = Math.floor(window.innerHeight / 12);
+  const aspect = cols / rows;
+
+  let output = "";
+  const time = performance.now();
+
+  for (let y = 0; y < rows; y++) {
+    for (let x = 0; x < cols; x++) {
+      output += main({x, y}, {time, aspect});
+    }
+    output += "\n";
+  }
+
+  screen.textContent = output;
+  requestAnimationFrame(render);
+}
+
+render();
+</script>
+</body>
+</html>
