@@ -1,9 +1,9 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
 import Landing from './pages/Landing'
-import ContactPage from './pages/ContactPage'
 import Navbar from './components/Navbar'
-import Help from './pages/Help'
+import About from './pages/About'
+import Projects from './pages/Projects'
 
 function App() {
 
@@ -12,8 +12,8 @@ function App() {
       <Navbar />
       <Routes>
         <Route path='/' element={<Landing />} />
-        <Route path='/contact-me' element={<ContactPage />} />
-        <Route path='/help' element={<Help />} />
+        <Route path='/about' element={<About />} />
+        <Route path='/projects' element={<Projects />} />
       </Routes>
     </BrowserRouter>
   )

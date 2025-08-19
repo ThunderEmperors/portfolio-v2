@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Menu, X } from 'lucide-react';
 import pfp from '/pfp.jpeg'
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -17,12 +18,16 @@ const Navbar = () => {
         </div>
         
         <div className="hidden md:flex items-center space-x-8">
-          <a className="hover:text-blue-400 transition-colors">Home</a>
-          <a href="#about" className="hover:text-blue-400 transition-colors">About</a>
-          <a href="#projects" className="hover:text-blue-400 transition-colors">Projects</a>
-          <a href="#contact" className="hover:text-blue-400 transition-colors">Contact</a>
+          <Link to={'/'}>
+            <a className="hover:text-blue-400 transition-colors">Home</a>
+          </Link>
+          <Link to={'/projects'}>
+            <a className="hover:text-blue-400 transition-colors">Projects</a>
+          </Link>
+          <Link to={'/about'}>
+            <a className="hover:text-blue-400 transition-colors">About</a>
+          </Link>  
         </div>
-
         <button 
           className="md:hidden"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
