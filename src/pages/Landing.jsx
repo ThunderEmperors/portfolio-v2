@@ -16,7 +16,7 @@ const Landing = () => {
 
       <Hero />
 
-      <section id="about" className="py-20 bg-gray-800/50">
+      <section id="about" className="py-20 bg-about-bg">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold mb-4">About Me</h2>
@@ -120,7 +120,7 @@ const Landing = () => {
         </div>
       </section>
 
-      <footer className="py-8 border-t border-gray-800">
+      <footer className="py-8 border-t border-[#415a77]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row justify-between items-center">
             <p className="text-gray-400 mb-4 sm:mb-0">

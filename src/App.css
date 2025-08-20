@@ -3,7 +3,8 @@
 @theme {
   --color-main-bg: #001d3d;
   --color-text-sec: #6d6875;
-  --color-navbar-bg: #d8e2dc80;
+  --color-navbar-bg: #d8e2dc06;
+  --color-about-bg: #005e8f;
 }
 
 @keyframes blob {

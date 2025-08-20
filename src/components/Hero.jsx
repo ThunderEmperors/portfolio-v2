@@ -7,15 +7,19 @@ const Hero = () => {
   return (
     <>
     <Runner program={program}/>
-    <div className='h-[100vh] w-[100vw] bg-sky-50/30 absolute'>
+    {/* <div className='h-[100vh] w-[100vw] bg-[rgba(53,68,89,0.47)] absolute'>
+    </div> */}
 
-    </div>
+        <div className='h-[100vh] w-[100vw] bg-[rgba(53,68,89,0.33)] absolute'></div>
     <section id="home" className="pt-20 min-h-screen flex items-center">
         <div className="max-w-6xl relative top-0 z-[6] mx-auto px-4 sm:px-6 lg:px-8 py-20">
+          {/* <div className="absolute inset-0 bg-black/40 rounded-2xl backdrop-blur-sm z-[-1]" /> */}
+          <div className="absolute inset-0 bg-[#0076b6ad] backdrop-blur-[3px] rounded-2xl z-[-1]" />
+          
           <div className="text-center">
             <h1 className="text-4xl sm:text-6xl font-bold mb-6">
               Hi, I'm{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-[#caf0f8]">
                 Thunder
               </span>
             </h1>
@@ -34,21 +38,10 @@ const Hero = () => {
               </a>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="#projects" 
-                className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg transition-colors"
-              >
-                View My Work
-              </a>
-              <a 
-                href="#contact" 
-                className="border border-gray-600 hover:border-gray-400 text-gray-300 hover:text-white px-8 py-3 rounded-lg transition-colors"
-              >
-                Get In Touch
-              </a>
             </div>
           </div>
         </div>
+        <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-b from-transparent to-about-bg"></div>
       </section>
     </>
   )
