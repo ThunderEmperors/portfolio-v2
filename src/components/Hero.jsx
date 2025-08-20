@@ -1,10 +1,17 @@
 import { Github, Linkedin, Mail } from 'lucide-react'
 import React from 'react'
+import Runner from './Runner'
+import program from './program.js'
 
 const Hero = () => {
   return (
+    <>
+    <Runner program={program}/>
+    <div className='h-[100vh] w-[100vw] bg-sky-50/30 absolute'>
+
+    </div>
     <section id="home" className="pt-20 min-h-screen flex items-center">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div className="max-w-6xl relative top-0 z-[6] mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center">
             <h1 className="text-4xl sm:text-6xl font-bold mb-6">
               Hi, I'm{' '}
@@ -43,6 +50,7 @@ const Hero = () => {
           </div>
         </div>
       </section>
+    </>
   )
 }
 

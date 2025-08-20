@@ -12,7 +12,7 @@ const Landing = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-main-bg text-gray-100">
+    <div className="min-h-screen text-gray-100">
 
       <Hero />
 

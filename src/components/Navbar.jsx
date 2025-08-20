@@ -19,13 +19,13 @@ const Navbar = () => {
         
         <div className="hidden md:flex items-center space-x-8">
           <Link to={'/'}>
-            <a className="hover:text-blue-400 transition-colors">Home</a>
+            <div className="hover:text-blue-400 transition-colors">Home</div>
           </Link>
           <Link to={'/projects'}>
-            <a className="hover:text-blue-400 transition-colors">Projects</a>
+            <div className="hover:text-blue-400 transition-colors">Projects</div>
           </Link>
           <Link to={'/about'}>
-            <a className="hover:text-blue-400 transition-colors">About</a>
+            <div className="hover:text-blue-400 transition-colors">About</div>
           </Link>  
         </div>
         <button 
