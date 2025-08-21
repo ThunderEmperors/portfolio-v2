@@ -12,21 +12,21 @@ const Hero = () => {
 
         <div className='h-[100vh] w-[100vw] bg-[rgba(53,68,89,0.33)] absolute'></div>
     <section id="home" className="pt-20 min-h-screen flex items-center">
-        <div className="max-w-6xl relative top-0 z-[6] mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div id="test" className="max-w-6xl relative top-0 z-[6] mx-auto px-4 sm:px-6 lg:px-8 py-20">
           {/* <div className="absolute inset-0 bg-black/40 rounded-2xl backdrop-blur-sm z-[-1]" /> */}
-          <div className="absolute inset-0 bg-[#0076b6ad] backdrop-blur-[3px] rounded-2xl z-[-1]" />
+          <div className="absolute inset-0 shadow-[0_0_15px_5px_rgba(0,0,0,0.5)] bg-[#4f788d9a] backdrop-blur-[3px] rounded-2xl z-[-1]" />
           
-          <div className="text-center">
-            <h1 className="text-4xl sm:text-6xl font-bold mb-6">
+          <div className="text-center flex flex-col justify-center">
+            <h1 className="text-4xl sm:text-6xl mb-5 font-bold">
               Hi, I'm{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-[#caf0f8]">
                 Thunder
               </span>
             </h1>
-            <p className="text-xl sm:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl sm:text-2xl text-gray-300 max-w-3xl mx-auto">
               Full Stack Developer passionate about creating beautiful, functional, and user-centered digital experiences.
             </p>
-            <div className="flex justify-center space-x-6 mb-12">
+            <div className="flex justify-center mt-5 space-x-6">
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
                 <Github size={24} />
               </a>

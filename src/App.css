@@ -1,10 +1,17 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: Milker;
+  src: url('./Milker.otf');
+}
+
 @theme {
   --color-main-bg: #001d3d;
   --color-text-sec: #6d6875;
   --color-navbar-bg: #d8e2dc06;
-  --color-about-bg: #005e8f;
+  --color-about-bg: #01497c;
+  --color-about-fontclr: #f2e8cf;
+  --font-milker-text: "Milker", sans-serif;
 }
 
 @keyframes blob {

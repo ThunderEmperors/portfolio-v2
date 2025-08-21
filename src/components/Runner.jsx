@@ -59,7 +59,7 @@ export default function Runner({ program}) {
           metrics: { aspect: cols / rows },
         };
 
-        console.log(window.innerHeight, rows)
+        // console.log(window.innerHeight, rows)
 
         if (typeof program?.main === "function") {
           for (let y = 0; y < rows; y++) {

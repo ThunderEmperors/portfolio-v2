@@ -16,13 +16,16 @@ const Landing = () => {
 
       <Hero />
 
-      <section id="about" className="py-20 bg-about-bg">
+      <section id="about" className="py-20 text-black bg-about-bg">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4">About Me</h2>
-            <p className="text-gray-300 max-w-3xl mx-auto text-lg">
-              I'm a passionate developer with experience in modern web technologies. 
-              I love creating efficient, scalable, and user-friendly applications that solve real-world problems.
+            <h2 className="sm:text-8xl font-milker-text text-3xl mb-4">About Me</h2>
+            <p className="text-about-fontclr max-w-3xl mx-auto text-lg">
+              A B.Tech student in Computer Science and Engineering.
+              <br />
+              Exploring Web Technologies. Producing, deploying and sharing meaningful web experiences.
+              <br />
+              Also starting my deep dive in the world of ML.
             </p>
           </div>
           
