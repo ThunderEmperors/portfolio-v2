@@ -41,7 +41,7 @@ const Hero = () => {
             </div>
           </div>
         </div>
-        <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-b from-transparent to-about-bg"></div>
+        <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-b from-transparent to-black"></div>
       </section>
     </>
   )

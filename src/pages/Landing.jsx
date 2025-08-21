@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Github, Linkedin, Mail, ExternalLink } from 'lucide-react';
 import Hero from '../components/Hero';
+import './Landing.css'
 
 const Landing = () => {
   const projects = [
@@ -15,8 +16,18 @@ const Landing = () => {
     <div className="min-h-screen text-gray-100">
 
       <Hero />
+    
+    {/* Scroll Bar */}
+    {/* <div className="scroll h-12 -translate-y-6 backdrop-blur-xl">
+      <div>
+        <span>=============================================================================================================</span>
+      </div>
+      <div>
+        <span>=============================================================================================================</span>
+      </div>
+    </div> */}
 
-      <section id="about" className="py-20 text-black bg-about-bg">
+      <section id="about" className="about-section py-20 text-white bg-black">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="sm:text-8xl font-milker-text text-3xl mb-4">About Me</h2>
@@ -115,7 +126,7 @@ const Landing = () => {
           </p>
           <a 
             href="mailto:thunderemperorwastaken@gmail.com"
-            className="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg transition-colors text-lg"
+            className="inline-flex items-center bg-gray-500 hover:bg-blue-700 text-white px-8 py-3 rounded-lg transition-colors text-lg"
           >
             <Mail size={20} className="mr-2" />
             Say Hello
