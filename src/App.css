@@ -12,6 +12,7 @@
   --color-about-bg: #4f788d;
   --color-about-fontclr: #f2e8cf;
   --font-milker-text: "Milker", sans-serif;
+  --color-project-bg: #121113;
 }
 
 @keyframes blob {

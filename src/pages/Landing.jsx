@@ -9,9 +9,18 @@ import { DiDjango } from "react-icons/di";
 import { FaGitAlt } from "react-icons/fa6";
 import Hero from '../components/Hero';
 import './Landing.css'
+import portfolioImg from '/portfolio.png'
 
 const Landing = () => {
   const projects = [
+    {
+      title: "Portfolio Website",
+      description: "A personal portfolio website built with React and Tailwind CSS.",
+      tech: ["React", "TailwindCSS"],
+      image: portfolioImg,
+      github: "https://github.com/ThunderEmperors/portfolio-v2",
+      live: ""
+    }
   ];
 
   const skills = [
@@ -46,7 +55,7 @@ const Landing = () => {
       </div>
     </div> */}
 
-      <section id="about" className="about-section py-20 text-white bg-black">
+      <section id="about" className="about-section pt-20 text-white bg-black">
         <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 flex-col items-center">
           <div className="text-center mb-16">
             <h2 className="sm:text-8xl font-milker-text text-3xl mb-4">About Me</h2>
@@ -79,24 +88,22 @@ const Landing = () => {
             </div>
 
             {/* Experience Box */}
-            <div className="bg-gray-800/50 p-8 rounded-lg w-4/5 max-w-6xl">
+            {/* <div className="bg-gray-800/50 p-8 rounded-lg w-4/5 max-w-6xl">
               <h3 className="text-2xl font-semibold mb-4 text-center">Experience</h3>
               <p className="text-gray-300 text-center">
                 Specialized in React ecosystem, Node.js backend development, and cloud deployment strategies.
               </p>
-            </div>
+            </div> */}
           </div>
         </div>
-
       </section>
+      
+      <div className="w-full h-32 bg-gradient-to-b from-black to-project-bg"></div>
 
-      <section id="projects" className="py-20">
+      <section id="projects" className="py-20 bg-project-bg text-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold mb-4">Featured Projects</h2>
-            <p className="text-text-sec max-w-2xl mx-auto text-lg">
-              Here are some of my recent projects that showcase my skills and experience.
-            </p>
           </div>
           
           {
@@ -105,42 +112,60 @@ const Landing = () => {
                 Nothing here yet but stay tuned!
               </div> 
               :
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 ">
                 {projects.map((project, index) => (
-                  <div key={index} className="bg-gray-800 rounded-lg p-6 hover:bg-gray-700 transition-colors">
-                    <h3 className="text-xl font-semibold mb-3">{project.title}</h3>
-                    <p className="text-gray-300 mb-4">{project.description}</p>
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      {project.tech.map((tech, techIndex) => (
-                        <span 
-                          key={techIndex}
-                          className="bg-blue-600/20 text-blue-400 px-3 py-1 rounded-full text-sm"
+                  <div key={index} 
+                  className="bg-gray-800 rounded-lg overflow-hidden 
+                  text-[#36454F] hover:text-[#a3cef1] hover:bg-gray-700 
+                  transition-colors"
+                  >
+                    <img src={project.image} alt={project.title} className="w-full h-48 object-cover"/>
+                    <div className="p-6">
+                      <h3 className="text-xl font-semibold mb-3">{project.title}</h3>
+                      <p className="text-gray-500 mb-4">{project.description}</p>
+                      
+                      <div className="flex flex-wrap gap-2 mb-4">
+                        {project.tech.map((tech, techIndex) => (
+                          <span
+                            key={techIndex}
+                            className="bg-blue-600/20 text-blue-400 px-3 py-1 rounded-full text-sm"
+                          >
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
+
+                        <div className="flex space-x-4">
+                        <a
+                          href={project.github}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center text-gray-400 hover:text-black transition-colors"
                         >
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-                    <div className="flex space-x-4">
-                      <a 
-                        href={project.github}
-                        className="flex items-center text-gray-400 hover:text-white transition-colors"
-                      >
-                        <Github size={16} className="mr-2" />
-                        Code
-                      </a>
-                      <a 
-                        href={project.live}
-                        className="flex items-center text-gray-400 hover:text-white transition-colors"
-                      >
-                        <ExternalLink size={16} className="mr-2" />
-                        Live Demo
-                      </a>
+                          <Github size={16} className="mr-2" />
+                          Code
+                        </a>
+                        {project.live && (
+                          <a
+                            href={project.live}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center text-gray-400 hover:text-black transition-colors"
+                          >
+                            <ExternalLink size={16} className="mr-2" />
+                            Live Demo
+                          </a>
+                        )}
+                      </div>
                     </div>
                   </div>
                 ))}
               </div>
-          } 
+
+          }
+
         </div>
+
       </section>
 
       <section id="contact" className="py-20 bg-gray-800/50">
