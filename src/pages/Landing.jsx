@@ -1,5 +1,12 @@
 import React, { useState } from 'react';
 import { Github, Linkedin, Mail, ExternalLink } from 'lucide-react';
+import { SiJavascript, SiRedux } from 'react-icons/si';
+import { FaReact, FaNodeJs, FaPython } from 'react-icons/fa';
+import { BiLogoMongodb, BiLogoTypescript } from "react-icons/bi";
+import { TbBrandCpp, TbSql } from "react-icons/tb";
+import { RiTailwindCssFill } from "react-icons/ri";
+import { DiDjango } from "react-icons/di";
+import { FaGitAlt } from "react-icons/fa6";
 import Hero from '../components/Hero';
 import './Landing.css'
 
@@ -8,8 +15,20 @@ const Landing = () => {
   ];
 
   const skills = [
-    "JavaScript", "React", "Node.js", "Python", "TypeScript", 
-    "Next.js", "MongoDB", "Redux", "Express"
+    { name: "C++", icon: <TbBrandCpp className="w-6 h-6" /> },
+    { name: "Python", icon: <FaPython className="w-6 h-6" /> },
+    { name: "SQL", icon: <TbSql className="w-6 h-6" /> },
+    { name: "Git", icon: <FaGitAlt className="w-6 h-6" /> },
+    { name: "JavaScript", icon: <SiJavascript className="w-6 h-6" /> },
+    { name: "TypeScript", icon: <BiLogoTypescript className="w-6 h-6" /> },
+    { name: "Django", icon: <DiDjango className="w-6 h-6" /> },
+    { name: "React", icon: <FaReact className="w-6 h-6" /> },
+    { name: "Node.js", icon: <FaNodeJs className="w-6 h-6" /> },
+    { name: "MongoDB", icon: <BiLogoMongodb className="w-6 h-6" /> },
+    { name: "Redux", icon: <SiRedux className="w-6 h-6" /> },
+    { name: "TailwindCSS", icon: <RiTailwindCssFill className="w-6 h-6" /> },
+
+    
   ];
 
   return (
@@ -28,7 +47,7 @@ const Landing = () => {
     </div> */}
 
       <section id="about" className="about-section py-20 text-white bg-black">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 flex-col items-center">
           <div className="text-center mb-16">
             <h2 className="sm:text-8xl font-milker-text text-3xl mb-4">About Me</h2>
             <p className="text-about-fontclr max-w-3xl mx-auto text-lg">
@@ -39,29 +58,36 @@ const Landing = () => {
               Also starting my deep dive in the world of ML.
             </p>
           </div>
-          
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h3 className="text-2xl font-semibold mb-6">Skills & Technologies</h3>
-              <div className="flex flex-wrap gap-3">
+
+          <div className="flex flex-col justify-center gap-10 items-center">
+            {/* Skills Box */}
+            <div className="px-[10%] w-[60%] border-2 border-solid p-8 rounded-lg max-w-6xl">
+              <h1 className="text-2xl text-center font-semibold mb-6 bg-gradient-to-r from-[#343a40] via-[#495057] to-[#212529] bg-clip-text text-transparent">
+                Skills & Technologies
+              </h1>
+
+              <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-5 justify-items-center">
                 {skills.map((skill, index) => (
-                  <span 
-                    key={index}
-                    className="bg-gray-700 text-gray-300 px-4 py-2 rounded-full text-sm"
-                  >
-                    {skill}
-                  </span>
+                  <div key={index} className="flex flex-col items-center text-gray-300">
+                    <div className="bg-gray-700 p-3 rounded-full mb-2">
+                      {skill.icon}
+                    </div>
+                    <span className="text-sm">{skill.name}</span>
+                  </div>
                 ))}
               </div>
             </div>
-            <div className="bg-gray-700/50 p-8 rounded-lg">
-              <h3 className="text-2xl font-semibold mb-4">Experience</h3>
-              <p className="text-gray-300">
+
+            {/* Experience Box */}
+            <div className="bg-gray-800/50 p-8 rounded-lg w-4/5 max-w-6xl">
+              <h3 className="text-2xl font-semibold mb-4 text-center">Experience</h3>
+              <p className="text-gray-300 text-center">
                 Specialized in React ecosystem, Node.js backend development, and cloud deployment strategies.
               </p>
             </div>
           </div>
         </div>
+
       </section>
 
       <section id="projects" className="py-20">

@@ -1,4 +1,6 @@
 import { Github, Linkedin, Mail } from 'lucide-react'
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
 import React from 'react'
 import Runner from './Runner'
 import program from './program.js'
@@ -27,14 +29,14 @@ const Hero = () => {
               Full Stack Developer passionate about creating beautiful, functional, and user-centered digital experiences.
             </p>
             <div className="flex justify-center mt-5 space-x-6">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <Github size={24} />
+              <a href="https://github.com/ThunderEmperors" className="text-gray-400 hover:text-white transition-colors">
+                <FaGithub size={24} />
               </a>
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <Linkedin size={24} />
+                <FaLinkedin size={24} />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <Mail size={24} />
+              <a href="mailto:thunderemperorwastaken@gmail.com" className="text-gray-400 hover:text-white transition-colors">
+                <MdEmail size={24} />
               </a>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
