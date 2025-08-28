@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Menu, X } from 'lucide-react';
 import pfp from '/pfp.jpeg'
 import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,20 +14,20 @@ const Navbar = () => {
         <div className="flex text-xl font-bold text-white">
           <img src={pfp} className='w-16 h-16 mr-5' />
           <div className='flex items-center'>
-            Thunder
+            Puranjay
           </div>  
         </div>
         
-        <div className="hidden md:flex items-center space-x-8">
-          <Link to={'/'}>
-            <div className="hover:text-blue-400 transition-colors">Home</div>
-          </Link>
-          <Link to={'/projects'}>
-            <div className="hover:text-blue-400 transition-colors">Projects</div>
-          </Link>
-          <Link to={'/about'}>
-            <div className="hover:text-blue-400 transition-colors">About</div>
-          </Link>  
+        <div className="hidden md:flex items-center space-x-8 text-navbar-text font-semibold">
+          <HashLink smooth to='#hero'>
+            <div className="hover:text-blue-400 transition-colors pr-6">Home</div>
+          </HashLink>
+          <HashLink smooth to='/#about'>
+            <div className="hover:text-blue-400 transition-colors pr-6  ">About</div>
+          </HashLink>
+          <HashLink smooth to='/#projects'>
+            <div className="hover:text-blue-400 transition-colors pr-6">Projects</div>
+          </HashLink>  
         </div>
         <button 
           className="md:hidden"

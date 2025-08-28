@@ -12,8 +12,6 @@ function App() {
       <Navbar />
       <Routes>
         <Route path='/' element={<Landing />} />
-        <Route path='/about' element={<About />} />
-        <Route path='/projects' element={<Projects />} />
       </Routes>
     </BrowserRouter>
   )

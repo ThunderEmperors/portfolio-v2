@@ -9,10 +9,14 @@
   --color-main-bg: #001d3d;
   --color-text-sec: #6d6875;
   --color-navbar-bg: #d8e2dc06;
+  --color-navbar-text: #90e0ef;
   --color-about-bg: #4f788d;
   --color-about-fontclr: #f2e8cf;
   --font-milker-text: "Milker", sans-serif;
   --color-project-bg: #121113;
+  --color-footer-bg: #013a63;
+  --color-footer-text: #ffe5d9;
+  --color-connect-bg: #012a4a;
 }
 
 @keyframes blob {

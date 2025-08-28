@@ -10,6 +10,8 @@ import { FaGitAlt } from "react-icons/fa6";
 import Hero from '../components/Hero';
 import './Landing.css'
 import portfolioImg from '/portfolio.png'
+import fictionaryImg from '/fictionary.png'
+import Footer from '../components/Footer';
 
 const Landing = () => {
   const projects = [
@@ -19,6 +21,14 @@ const Landing = () => {
       tech: ["React", "TailwindCSS"],
       image: portfolioImg,
       github: "https://github.com/ThunderEmperors/portfolio-v2",
+      live: ""
+    },
+    {
+      title: "Fictionary",
+      description: "A Web Trivia game made as a group project.",
+      tech: ["React", "TailwindCSS", "Django"],
+      image: fictionaryImg,
+      github: "https://github.com/ThunderEmperors/fictionary-new-frontend",
       live: ""
     }
   ];
@@ -42,8 +52,11 @@ const Landing = () => {
 
   return (
     <div className="min-h-screen text-gray-100">
-
-      <Hero />
+      
+      <div id="hero">
+        <Hero/>
+      </div>
+      
     
     {/* Scroll Bar */}
     {/* <div className="scroll h-12 -translate-y-6 backdrop-blur-xl">
@@ -55,7 +68,8 @@ const Landing = () => {
       </div>
     </div> */}
 
-      <section id="about" className="about-section pt-20 text-white bg-black">
+      <div id="about">
+      <section className="about-section pt-20 text-white bg-black">
         <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 flex-col items-center">
           <div className="text-center mb-16">
             <h2 className="sm:text-8xl font-milker-text text-3xl mb-4">About Me</h2>
@@ -97,10 +111,12 @@ const Landing = () => {
           </div>
         </div>
       </section>
+      </div>
       
       <div className="w-full h-32 bg-gradient-to-b from-black to-project-bg"></div>
 
-      <section id="projects" className="py-20 bg-project-bg text-white">
+      <div id='projects'>
+      <section className="py-20 bg-project-bg text-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold mb-4">Featured Projects</h2>
@@ -167,16 +183,17 @@ const Landing = () => {
         </div>
 
       </section>
+      </div>
 
-      <section id="contact" className="py-20 bg-gray-800/50">
+      <section id="contact" className="py-10 bg-connect-bg">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">Get In Touch</h2>
-          <p className="text-gray-300 text-lg mb-8 max-w-2xl mx-auto">
+          <h2 className="text-3xl text-blue-300 sm:text-4xl font-bold mb-4">Get In Touch</h2>
+          <p className="text-gray-500 text-lg mb-8 max-w-2xl mx-auto">
             I'm always interested in new opportunities and interesting projects. 
             Let's connect and discuss how we can work together.
           </p>
           <a 
-            href="mailto:thunderemperorwastaken@gmail.com"
+            href="mailto:puranjayjoshi2004@gmail.com"
             className="inline-flex items-center bg-gray-500 hover:bg-blue-700 text-white px-8 py-3 rounded-lg transition-colors text-lg"
           >
             <Mail size={20} className="mr-2" />
@@ -185,26 +202,7 @@ const Landing = () => {
         </div>
       </section>
 
-      <footer className="py-8 border-t border-[#415a77]">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col sm:flex-row justify-between items-center">
-            <p className="text-gray-400 mb-4 sm:mb-0">
-              Thunder
-            </p>
-            <div className="flex space-x-6">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <Github size={20} />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <Linkedin size={20} />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <Mail size={20} />
-              </a>
-            </div>
-          </div>
-        </div>
-      </footer>
+    <Footer />
     </div>
   );
 };

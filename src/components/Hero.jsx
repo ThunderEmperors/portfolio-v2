@@ -22,17 +22,17 @@ const Hero = () => {
             <h1 className="text-4xl sm:text-6xl mb-5 font-bold">
               Hi, I'm{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-[#caf0f8]">
-                Thunder
+                Puranjay
               </span>
             </h1>
             <p className="text-xl sm:text-2xl text-gray-300 max-w-3xl mx-auto">
-              Full Stack Developer passionate about creating beautiful, functional, and user-centered digital experiences.
+              Full Stack Developer and Software Engineer passionate about creating beautiful, functional, and user-centered digital experiences.
             </p>
             <div className="flex justify-center mt-5 space-x-6">
               <a href="https://github.com/ThunderEmperors" className="text-gray-400 hover:text-white transition-colors">
                 <FaGithub size={24} />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <a href="https://www.linkedin.com/in/puranjay-joshi-361972289/" className="text-gray-400 hover:text-white transition-colors">
                 <FaLinkedin size={24} />
               </a>
               <a href="mailto:thunderemperorwastaken@gmail.com" className="text-gray-400 hover:text-white transition-colors">
