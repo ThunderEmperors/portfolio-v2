@@ -11,6 +11,7 @@ import Hero from '../components/Hero';
 import './Landing.css'
 import portfolioImg from '/portfolio.png'
 import fictionaryImg from '/fictionary.png'
+import CodedockImg from '/Codedock.png'
 import Footer from '../components/Footer';
 
 const Landing = () => {
@@ -29,6 +30,14 @@ const Landing = () => {
       tech: ["React", "TailwindCSS", "Django"],
       image: fictionaryImg,
       github: "https://github.com/ThunderEmperors/fictionary-new-frontend",
+      live: ""
+    },
+    {
+      title: "CodeDock",
+      description: "A Web App that lets you Transform your code into flexible, modular components that are easy to manage, visualize, and distribute",
+      tech: ["React", "TailwindCSS", "NodeJS", "MongoDB", "Redux"],
+      image: CodedockImg,
+      github: "https://github.com/ThunderEmperors/CodeDock",
       live: ""
     }
   ];
